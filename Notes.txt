@@ -1,0 +1,6 @@
+Optimization techniques
+=======================
+
+Searching
+=========
+-> use hashing for unsorted array
