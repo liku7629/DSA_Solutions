@@ -7,7 +7,7 @@ public class ReverseList2 {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
-//        new Solution().reverseList(head);
+        new Solution().reverseList(head);
 
         Integer integer = new Integer(5);
         Integer integer2 = new Integer(5);
@@ -22,6 +22,11 @@ public class ReverseList2 {
 class Solution {
 
     //    1 -> 2 -> 3 -> 4 -> 5
+
+    // we will got till (n - 1)th node i.e. 4
+    // then we will call head.next.next = head means 4.5.next = head, currently head is pointing to 4
+    //
+
 
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) {

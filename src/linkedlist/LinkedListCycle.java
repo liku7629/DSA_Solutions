@@ -22,3 +22,23 @@ class LinkedListCycle_Solution {
         return false;
     }
 }
+
+class LinkedListCycle_Constant_Space_Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode fast = head, slow = head;
+        boolean firstNode = false;
+
+        while (fast != null && fast.next != null && slow != null) {
+            if (firstNode && fast == slow) {
+                return true;
+            }
+
+            firstNode = true;
+
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+
+        return false;
+    }
+}

@@ -9,8 +9,7 @@ public class MaximumSumSubArray {
 
     public int maxSubArray(int[] nums) {
         int maxSum = nums[0];
-
-        int currSum = nums[0];
+        int currSum = 0;
 
         //First we will initialize curr
 
@@ -30,6 +29,9 @@ public class MaximumSumSubArray {
 
         for (int i = 0; i < nums.length; i++) {
             int currSum = nums[i];
+
+            // early check to prevent [-2,1]
+            // single positive number issue
             maxSum = Math.max(currSum, maxSum);
 
             for (int j = i + 1; j < nums.length; j++) {
