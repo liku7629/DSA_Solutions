@@ -1,4 +1,5 @@
 package arrays;
+
 //https://leetcode.com/problems/container-with-most-water/
 //shrinking window, left/right initially at endpoints, shift the pointer with min height;
 //Brute force solution given below
