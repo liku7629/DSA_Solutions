@@ -1,9 +1,17 @@
 package binarysearch;
 
 public class FindMinimuminRotatedSortedArray {
-
+    public static void main(String[] args) {
+        int min = new FindMinimuminRotatedSortedArray_Solution().findMin(new int[]{8, 9, 1, 2, 3, 4, 5, 6, 7});
+        System.out.println("result=" + min);
+        new FindMinimuminRotatedSortedArray_Solution().findMin(new int[] {3, 4, 5, 6, 7, 8, 9, 1, 2});
+    }
 }
 
+//Ex: [8, 9, 1, 2, 3, 4, 5, 6, 7]
+
+// if nums[start] > nums[mid] the min is on the left half
+// else min is on the right half
 class FindMinimuminRotatedSortedArray_Solution {
     public int findMin(int[] nums) {
         if (nums.length == 1) {
@@ -18,6 +26,8 @@ class FindMinimuminRotatedSortedArray_Solution {
 
         while (start <= end) {
             int mid = (start + end) / 2;
+
+            System.out.println("start=" + start + " end=" + end + " mid=" + mid);
 
             if (nums[mid] > nums[mid + 1]) {
                 return nums[mid + 1];
