@@ -1,5 +1,6 @@
 package arrays;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,6 +8,12 @@ public class MajorityElement {
 
 }
 
+ class MajorityElement_Bruteforce_Solution {
+     public int majorityElement(int[] nums) {
+         Arrays.sort(nums);
+         return nums[nums.length / 2];
+     }
+ }
 
 //
 class MajorityElement_HashMap_Solution {

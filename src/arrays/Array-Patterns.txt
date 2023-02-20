@@ -1,0 +1,6 @@
+Two Pointers
+============
+-> When merging two sorted compare from the greator elements not from the smaller elements.
+
+Sliding Window
+==============
