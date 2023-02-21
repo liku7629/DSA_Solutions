@@ -4,3 +4,8 @@ Two Pointers
 
 Sliding Window
 ==============
+
+Sub Arrays Variations
+=====================
+-> Sum of All Odd Length Subarrays
+-> 
