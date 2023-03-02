@@ -5,10 +5,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamTest {
     public static void main(String[] args) {
-        findDuplicatesUsingStreamsString();
+//        findDuplicatesUsingStreamsString();
+        printInfiniteStream();
     }
 
     public static void findDuplicatesUsingStreams() {
@@ -27,5 +29,16 @@ public class StreamTest {
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
         System.out.println(map);
+    }
+
+    public static void printInfiniteStream() {
+//        Stream<Integer> infiniteStream = Stream.iterate(2, i -> i * 2).limit(100);
+//        infiniteStream.forEach(System.out::println);
+
+        long compound = 2;
+        for (int i = 1; i <= 100; i++) {
+            compound = compound * 2;
+            System.out.println(i + "   " + compound);
+        }
     }
 }
