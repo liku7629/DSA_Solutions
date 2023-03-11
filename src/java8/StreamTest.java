@@ -1,16 +1,45 @@
 package java8;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamTest {
     public static void main(String[] args) {
 //        findDuplicatesUsingStreamsString();
-        printInfiniteStream();
+//        printInfiniteStream();
+//        iterateUsingStream();
+//        getMinimumNumber();
+         firstNonRepeatedCharatcter("Strings");
+    }
+
+    // https://www.java-success.com/java-8-string-streams-finding-first-non-repeated-character-functional-programming/
+    public static void firstNonRepeatedCharatcter(String s) {
+        Character result = s.chars().mapToObj(c -> Character.toLowerCase(Character.valueOf((char) c)))
+                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getValue() == 1)
+                .findFirst()
+                .get()
+                .getKey();
+        System.out.println(result);
+    }
+
+    public static void getMinimumNumber() {
+        Integer min = Stream.of( 3, 4, 5, 6,7, 1, 2)
+//                .min(Comparator.naturalOrder()) // it will return the minimum
+//                .min(Comparator.reverseOrder()) // to sort in rever
+                .max(Comparator.naturalOrder()) // it will always the maximum
+                .get();
+        System.out.println("The Minimum number is: " + min);
+    }
+
+    public static void iterateUsingStream() {
+        List<String> str = Arrays.asList("Hello","Interview","Questions","Answers");
+        str.stream().forEach(System.out::println);
     }
 
     public static void findDuplicatesUsingStreams() {

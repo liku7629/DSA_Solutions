@@ -1,11 +1,33 @@
 package string;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 // https://leetcode.com/problems/first-unique-character-in-a-string/description/
 public class FirstUniqueCharacterinaString {
 
+}
+
+//Using Stream api
+class FirstUniqueCharacterinaString_Using_Stream_Api_Solution {
+    public int firstUniqChar(String s) {
+        Map.Entry<Character, Long> resultEntry = s.chars().mapToObj(c -> Character.toLowerCase(Character.valueOf((char) c)))
+                .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getValue() == 1)
+                .findFirst()
+                .orElse(null);
+
+        if (resultEntry == null) {
+            return -1;
+        }
+
+        return s.indexOf(resultEntry.getKey());
+    }
 }
 
 // Time : O(n)
