@@ -2,9 +2,10 @@ package binarysearch;
 
 public class FindMinimuminRotatedSortedArray {
     public static void main(String[] args) {
-        int min = new FindMinimuminRotatedSortedArray_Solution().findMin(new int[]{8, 9, 1, 2, 3, 4, 5, 6, 7});
-        System.out.println("result=" + min);
-        new FindMinimuminRotatedSortedArray_Solution().findMin(new int[] {3, 4, 5, 6, 7, 8, 9, 1, 2});
+//        int min = new FindMinimuminRotatedSortedArray_Solution().findMin(new int[]{8, 9, 1, 2, 3, 4, 5, 6, 7});
+//        System.out.println("result=" + min);
+//        new FindMinimuminRotatedSortedArray_Solution().findMin(new int[] {3, 4, 5, 6, 7, 8, 9, 1, 2});
+        new FindMinimuminRotatedSortedArray_Solution().findMin(new int[] {5, 4, 3, 2, 1});
     }
 }
 
@@ -29,6 +30,9 @@ class FindMinimuminRotatedSortedArray_Solution {
 
             System.out.println("start=" + start + " end=" + end + " mid=" + mid);
 
+            // here we not get IndexOutOfBoundException because at the start we are
+            // check if (nums[start] < nums[end])
+            // and minimum element will be at the end since the array is sorted in ascending order
             if (nums[mid] > nums[mid + 1]) {
                 return nums[mid + 1];
             }

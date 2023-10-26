@@ -1,0 +1,16 @@
+Heap
+====
+
+Identification
+==============
+-> Top or bottom K or smallest or largest
+
+Types Of Heap
+=============
+Min Heap
+========
+-> K + Largest
+
+Max Heap
+========
+-> K + Smallest
