@@ -5,10 +5,10 @@ package arrays;
 //soln: https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/discuss/27987/Short-and-Simple-Java-solution-(easy-to-understand)
 public class RemoveDuplicatesFromSortedArray {
     public static void main(String[] args) {
-//        System.out.println(removeDuplicates(new int[] {1,1, 2, 2, 2, 3, 4, 5, 5}));
+        System.out.println(removeDuplicates(new int[] {1,1, 2, 2, 2, 3, 4, 5, 5}));
 //        System.out.println(removeDuplicates1(new int[] {1,1, 2, 2, 2, 3, 4, 5, 5}));
-        System.out.println(removeDuplicates2(new int[] {1, 1, 1,1, 2, 2, 2, 3, 4, 5, 5, 5}));
-        System.out.println(removeDuplicates2(new int[] {1, 2, 3}));
+//        System.out.println(removeDuplicates2(new int[] {1, 1, 1,1, 2, 2, 2, 3, 4, 5, 5, 5}));
+//        System.out.println(removeDuplicates2(new int[] {1, 2, 3}));
     }
 
     //https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/

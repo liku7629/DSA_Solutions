@@ -23,7 +23,12 @@ class LinkedListCycle_Solution {
     }
 }
 
-//https://leetcode.com/problems/linked-list-cycle/solutions/127823/linked-list-cycle/
+// https://leetcode.com/problems/linked-list-cycle/solutions/6556606/0ms-100-step-by-step-explained-with-visualization-easiest-to-understand-java-c-python/
+// https://yuminlee2.medium.com/floyds-cycle-detection-algorithm-b27ed50c607f
+
+// Even if the fast pointer "jumps over" the slow one,
+// they are still in the same space, and will once inside the cycle.
+
 class LinkedListCycle_Constant_Space_Solution {
     public class Solution {
         public boolean hasCycle(ListNode head) {

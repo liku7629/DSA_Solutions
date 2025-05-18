@@ -5,7 +5,13 @@ import java.util.Set;
 
 // https://leetcode.com/problems/longest-palindrome/description/
 public class LongestPalindrome {
+    public static void main(String[] args) {
+        LongestPalindrome_Solution solution = new LongestPalindrome_Solution();
+        LongestPalindrome_Most_Optimal_Solution mostOptimalSolution = new LongestPalindrome_Most_Optimal_Solution();
 
+        System.out.println(solution.longestPalindrome("abccccdd"));
+        System.out.println(mostOptimalSolution.longestPalindrome("abccccdd"));
+    }
 }
 //Input: s = "abccccdd"
 //Output: 7
@@ -27,5 +33,31 @@ class LongestPalindrome_Solution {
         }
 
         return set.size() == 0 ? s.length() : s.length() - set.size() + 1;
+    }
+}
+
+class LongestPalindrome_Most_Optimal_Solution {
+    public int longestPalindrome(String s) {
+        if (s.length() <= 1) {
+            return s.length();
+        }
+
+        int longest = 0;
+        int[] set = new int[130];
+
+        for (char c : s.toCharArray()) {
+            if (set[c] == 1) {
+                set[c] = 0;
+                longest++;
+            } else {
+                set[c] = 1;
+            }
+        }
+
+        if (s.length() > longest) {
+            longest++;
+        }
+
+        return longest;
     }
 }

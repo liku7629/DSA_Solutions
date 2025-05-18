@@ -9,13 +9,12 @@ public class ReverseList2 {
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
         head.next.next.next.next = new ListNode(5);
-        new Solution().reverseList(head);
+        ListNode listNode = new Solution().reverseList(head);
 
-        Integer integer = new Integer(5);
-        Integer integer2 = new Integer(5);
-        System.out.println(integer.hashCode());
-        System.out.println(System.identityHashCode(integer));
-        System.out.println(System.identityHashCode(integer2));
+        while (listNode != null) {
+            System.out.print(listNode.val + " -> ");
+            listNode = listNode.next;
+        }
     }
 
 

@@ -3,7 +3,9 @@ package arrays;
 import java.util.Arrays;
 
 public class SquaresofaSortedArray {
-
+    public static void main(String[] args) {
+        System.out.println(new SquaresofaSortedArray_Optimal_Solution().sortedSquares(new int[] {-4,-1,0,3,10}));
+    }
 }
 
 class SquaresofaSortedArray_Solution {

@@ -46,7 +46,7 @@ public class StreamTest {
         List<Integer> numList = Arrays.asList(5, 5, 5, 3, 3, 1, 2, 4, 6);
 
         Map<Integer, Long> map = numList.stream()
-                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+                        .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
         System.out.println(map);
     }

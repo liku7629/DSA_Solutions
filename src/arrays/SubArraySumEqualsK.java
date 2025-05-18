@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class SubArraySumEqualsK {
     public static void main(String[] args) {
-
+        new SubArraySumEqualsK_Optimal_Solution().subarraySum(new int[] {3, -3, 1, 1, 1}, 3);
     }
 }
 

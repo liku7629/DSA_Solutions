@@ -80,9 +80,10 @@ public class StreamApiCodingInterviewQuestions {
     }
 
     public static void sort_By_Dept_Then_By_Salary(List<Employee> employees) {
-        List<Employee> sortedEmployees = employees.stream().sorted(Comparator.comparing(Employee::getDept)
-                .thenComparing(Employee::getSalary))
-                .collect(Collectors.toList());
+        List<Employee> sortedEmployees = employees.stream().sorted(
+                    Comparator.comparing(Employee::getDept)
+                    .thenComparing(Employee::getSalary)
+                ).collect(Collectors.toList());
 
         System.out.println(sortedEmployees);
     }
@@ -132,5 +133,8 @@ class Employee {
                 ", salary=" + salary +
                 ", dept='" + dept + '\'' +
                 '}';
+    }
+
+    public void salaryIncrement(double v) {
     }
 }
