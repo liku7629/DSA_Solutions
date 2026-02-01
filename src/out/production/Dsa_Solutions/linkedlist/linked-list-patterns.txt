@@ -1,0 +1,5 @@
+Linked List
+===========
+-> Every Linked List Problem, if you can't do it in LinkedList format,
+   copy the data in list and now your question would become for an
+   array, solve it.

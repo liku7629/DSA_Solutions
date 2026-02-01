@@ -2,7 +2,7 @@ package arrays;
 
 public class BestTimeToBuySellStock {
     public static void main(String[] args) {
-        System.out.println(new Solution().maxProfit(new int[] {7,1,5,3,6,4}));
+        System.out.println(new BestTimeToBuySellStock_Solution ().maxProfit(new int[] {7,1,5,3,6,4}));
     }
 }
 
@@ -30,7 +30,7 @@ class SolutionBruteForce {
 
 //  minPrice = Math.min(minPrice, prices[i]);
 //  update the minimum price to keep track of the lowest price
-class Solution {
+class BestTimeToBuySellStock_Solution {
     public int maxProfit(int[] prices) {
         int maxProfit = 0, minPrice = prices[0];
 

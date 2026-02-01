@@ -35,7 +35,6 @@ public class TreeTraversal {
         root.setRight(node30);
         root.setLeft(node20);
 
-        levelOrderTraversal(root);
     }
 
     public static void iterativeInOrder(Node root) {
@@ -51,23 +50,6 @@ public class TreeTraversal {
 
             curr = nodes.pop();
             System.out.println(curr.getData() + "  ");
-            curr = curr.getRight();
-        }
-    }
-
-    public static void iterativePreOrder(Node root) {
-        Node curr = root;
-
-        Stack<Node> nodes = new Stack<>();
-
-        while (curr != null || !nodes.isEmpty()) {
-            while (curr != null) {
-                System.out.println(curr.getData() + "  ");
-                nodes.push(curr);
-                curr = curr.getLeft();
-            }
-
-            curr = nodes.pop();
             curr = curr.getRight();
         }
     }
@@ -119,25 +101,6 @@ public class TreeTraversal {
 
         if (currentlevel == level) {
             System.out.print(node.getData() + "  ");
-        }
-    }
-
-    public static void levelOrderTraversal(Node node) {
-        Queue<Node> queue = new LinkedList<Node>();
-        queue.add(node);
-
-        while (!queue.isEmpty()) {
-            Node tempNode = queue.poll();
-
-            System.out.println(tempNode.getData());
-
-            if (tempNode.getLeft() != null) {
-                queue.add(tempNode.getLeft());
-            }
-
-            if (tempNode.getRight() != null) {
-                queue.add(tempNode.getRight());
-            }
         }
     }
 

@@ -6,7 +6,7 @@ public class CheckifArrayIsSortedandRotated {
 }
 
 class CheckifArrayIsSortedandRotated_Solution {
-    // if the array is rotated the then must be pivot
+    // if the array is rotated the then must be pivot and the first element must be greater than the last element like [3,4,5,1,2]
     // in the pivot the left element > right element
     // if pivot count is 1 then the array is rotated
     // if 0 then not rotated

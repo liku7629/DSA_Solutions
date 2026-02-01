@@ -1,0 +1,20 @@
+Collectors
+==========
+https://medium.com/swlh/java-collectors-and-its-20-methods-2fc422920f18
+
+groupingBy
+==========
+https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/
+
+sorted
+======
+https://mkyong.com/java8/java-8-collectors-groupingby-and-mapping-example/
+
+
+List To Map
+===========
+https://mkyong.com/java8/java-8-convert-list-to-map/
+
+Common Coding Interview Questions
+=================================
+https://javahungry.blogspot.com/2020/05/java-8-coding-and-programming-interview-questions.html

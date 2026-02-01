@@ -34,6 +34,10 @@ class FindAllNumbersDisappearedinanArray_Optimal_Solution {
 
     // https://www.youtube.com/watch?v=8i-f24YFWC4
     // Optimal Approach
+    // Here since the numbers are between [1 - n], there is a direct relation between the values and the index.
+    // the maximum value can be mapped to index n - 1
+    // So we will multiply each index with -1 and see which index are still positive
+    // The indexes which are still positive are the results = (index + 1)
     public static List<Integer> findDisappearedNumbers(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             int idx = Math.abs(nums[i]) - 1;
@@ -43,6 +47,8 @@ class FindAllNumbersDisappearedinanArray_Optimal_Solution {
             if (nums[idx] > 0)
                 nums[idx] *= -1;
         }
+
+        System.out.println(Arrays.toString(nums));
 
         ArrayList<Integer> results = new ArrayList<>();
 

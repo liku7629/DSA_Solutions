@@ -1,8 +1,9 @@
 package arrays;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class IntersectionofTwoArrays {
 
@@ -28,5 +29,17 @@ class IntersectionofTwoArrays_Solution {
 
         int[] result = resultSet.stream().mapToInt(i -> i).toArray();
         return result;
+    }
+}
+
+class IntersectionofTwoArrays_Stream_Api_Solution {
+    public int[] intersection(int[] nums1, int[] nums2) {
+        Set<Integer> set = Arrays.stream(nums1)
+                .boxed()
+                .collect(Collectors.toSet());
+        return Arrays.stream(nums2)
+                .filter(n -> set.contains(n))
+                .distinct()
+                .toArray();
     }
 }

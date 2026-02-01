@@ -1,0 +1,7 @@
+Bitwise left shift operator
+===========================
+-> Shifts bit to the left by the number of bits given on the right side
+01 << 2 = 100
+a << b  ≡  a × (2^b)
+1 << 5  =  1 * (2^5)  =  32
+5 << 5  =  5 × (2^5)  =  5 × 32  =  160

@@ -11,7 +11,7 @@ public class LongestConsecutiveSequence {
 // sort the input= [0, 1, 1, 2]
 // if the array contains duplicates then its a valid sequence.          //: confirm with intviewer
 // else if (nums[i - 1] != nums[i]) checking for duplicate element like 1, 1 and also resetting the
-// count to 1 to continue the iteration from current index
+// count to 1 and continue the iteration from current index
 class LongestConsecutiveSequence_BruteForce_Solution {
     public int longestConsecutive(int[] nums) {
         if (nums.length <= 1) {

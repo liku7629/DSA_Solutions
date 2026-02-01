@@ -8,8 +8,9 @@ public class BitManipulation {
 
 //        countRightMostSetBits(29); // 11101
 //        reversingBitsOfANumber(12345);
-        swap();
-        printBitManipulation();
+//        swap();
+//        printBitManipulation();
+
     }
 
     public static void printBitManipulation() {
