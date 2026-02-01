@@ -5,7 +5,7 @@ bin/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-
+/out
 ### STS ###
 .apt_generated
 .classpath
